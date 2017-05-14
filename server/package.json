@@ -1,0 +1,28 @@
+{
+  "name": "petzone",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "server.js",
+  "scripts": {
+    "start-server": "pm2 start ecosystem.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sanyang@gitlab.com/sanyang/petzone.git"
+  },
+  "keywords": [
+    "pet",
+    "zone"
+  ],
+  "author": "Nguyen Dang Khoa (San Yang)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sanyang/petzone/issues"
+  },
+  "homepage": "https://gitlab.com/sanyang/petzone#README",
+  "dependencies": {
+    "express": "^4.15.2",
+    "pm2": "^2.4.6"
+  },
+  "devDependencies": {}
+}

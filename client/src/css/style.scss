@@ -1,0 +1,123 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.food {
+    background-color: white;
+    border-style: none;
+    border-radius: 0.1px;
+    padding-top: 20px;
+    margin: 20px;
+    width: 250px;
+    height: 300px;
+    display: inline-table;
+
+    img {
+        max-height: 160px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    p {
+        font-family: Helvetica;
+        text-align: center;
+    }
+}
+
+.description {
+    font-size: 13px;
+    font-style: oblique;
+}
+
+
+.center {
+    display: inline-block;
+    margin: auto;
+}
+
+.title {
+    font-family: Helvetica, sans-serif, serif;
+}
+
+
+
+
+#food-panel {
+    display: block;
+    min-height: 300px;
+    text-align: center;
+}
+
+#price {
+    color: darkturquoise;
+    font-weight: bold;
+    font-size: 25;
+}
+
+#nav-button {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+#page-number {
+    margin-left: 15px;
+    margin-right: 15px;   
+}
+
+
+#header-navbar {
+    background-color: #7f8c8d;
+    height: 60px;
+    width: 100%;
+    display: block;
+}
+
+#footer {
+    width: 100%;
+    height: 250px;
+    background-color: #ecf0f1;
+}
+
+#footer-content {
+    height: 150px;
+}
+
+
+#develop-by {
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+
+#lang {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+}
+
+#logo-text {
+    color: white;
+    position: absolute;
+    left: 80px;
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+
+
