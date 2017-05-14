@@ -4,7 +4,7 @@ var db = require('./database/db.js');
 
 var app = express();
 
-var PATH_CLIENT_FOLDER = path.resolve(__dirname, '../client/');
+var PATH_CLIENT_FOLDER = path.resolve(__dirname, './client/');
 app.use(express.static(path.resolve(PATH_CLIENT_FOLDER, 'dist')));
 
 app.use(express.static(__dirname));
