@@ -8,7 +8,7 @@ import TEXT from 'ultils/lang';
 
 
 const API = {
-    url_food_list: 'http://localhost:5000/foodlist'
+    url_food_list: 'http://localhost:8000/foodlist'
 }
 
 

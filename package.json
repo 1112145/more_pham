@@ -4,7 +4,7 @@
   "description": "none",
   "main": "server.js",
   "scripts": {
-    "start-server": "pm2 start ecosystem.config.js"
+    "start-server": "nodemon server.js --watch"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "homepage": "https://gitlab.com/sanyang/petzone#README",
   "dependencies": {
     "express": "^4.15.2",
+    "nodemon": "^1.11.0",
     "pm2": "^2.4.6"
   },
   "devDependencies": {}

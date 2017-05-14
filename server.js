@@ -20,6 +20,6 @@ app.get('/foodlist', function (req, res) {
 });
 
 
-var http = app.listen(process.env.APP_PORT, function (req, res) {
-    console.log('Server started at port: ' + process.env.APP_PORT);
+var http = app.listen(8000, function (req, res) {
+    console.log('Server started at port: ' + 8000);
 });
