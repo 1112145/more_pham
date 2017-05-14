@@ -13,7 +13,7 @@ const API = {
 
 
 const CONST = {
-    pageSize: 5, // number element per page
+    pageSize: 4, // number element per page
 }
 
 class FoodView extends React.Component {
