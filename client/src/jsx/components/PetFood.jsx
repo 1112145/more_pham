@@ -1,5 +1,8 @@
 import React from 'react';
 import style from 'css/style.scss';
+import { connect } from 'react-redux';
+import { viewFoodDetail } from 'actions/action';
+import TEXT from 'ultils/lang';
 
 
 class PetFood extends React.Component {
@@ -13,7 +16,7 @@ class PetFood extends React.Component {
             {this.renderImage()}
             {this.renderName()}
             {this.renderPrice()}
-            {this.renderDescription()}
+            {this.renderDetailButton()}
         </div>);
     }
 
@@ -37,6 +40,23 @@ class PetFood extends React.Component {
         return <p id='price'>{this.props.info.retail_price}</p>
     }
 
+    renderDetailButton() {
+        return <button className='btn btn-warning' onClick={this.props.onFoodViewDetail.bind(this,this.props.info)}>
+            {TEXT.detail[this.props.language]}</button>
+    }
+
 }
 
-export default PetFood;
+const mapStateToProps = function (state) {
+    return { language: state.language}
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onFoodViewDetail: (food) => {
+      dispatch(viewFoodDetail(food))
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(PetFood);

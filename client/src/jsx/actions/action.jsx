@@ -4,3 +4,10 @@ export function selectLanguage(lang){
         lang
     }
 }
+
+export function viewFoodDetail(food){
+    return {
+        type: 'FOOD_DETAIL',
+        food
+    }
+}

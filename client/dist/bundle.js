@@ -6932,6 +6932,26 @@ exports.default = {
     develop_by: {
         en: '@ 2017 Develop by San Yang Studio',
         vi: '@ 2017 Phát triển bởi San Yang Studio'
+    },
+    detail: {
+        en: 'View Detail',
+        vi: 'Xem chi tiết'
+    },
+    product_name: {
+        en: 'Product Name',
+        vi: 'Tên sản phẩm'
+    },
+    producer: {
+        en: 'Producer',
+        vi: 'Nhà sản xuất'
+    },
+    retail_price: {
+        en: 'Retail Price',
+        vi: 'Giá bán lẻ'
+    },
+    description: {
+        en: 'Description',
+        vi: 'Mô tả'
     }
 
 };
@@ -11118,10 +11138,18 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.selectLanguage = selectLanguage;
+exports.viewFoodDetail = viewFoodDetail;
 function selectLanguage(lang) {
     return {
         type: 'SELECT_LANG',
         lang: lang
+    };
+}
+
+function viewFoodDetail(food) {
+    return {
+        type: 'FOOD_DETAIL',
+        food: food
     };
 }
 
@@ -11145,6 +11173,14 @@ var _react2 = _interopRequireDefault(_react);
 var _style = __webpack_require__(232);
 
 var _style2 = _interopRequireDefault(_style);
+
+var _reactRedux = __webpack_require__(32);
+
+var _action = __webpack_require__(98);
+
+var _lang = __webpack_require__(56);
+
+var _lang2 = _interopRequireDefault(_lang);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11172,7 +11208,7 @@ var PetFood = function (_React$Component) {
                 this.renderImage(),
                 this.renderName(),
                 this.renderPrice(),
-                this.renderDescription()
+                this.renderDetailButton()
             );
         }
     }, {
@@ -11216,12 +11252,33 @@ var PetFood = function (_React$Component) {
                 this.props.info.retail_price
             );
         }
+    }, {
+        key: 'renderDetailButton',
+        value: function renderDetailButton() {
+            return _react2.default.createElement(
+                'button',
+                { className: 'btn btn-warning', onClick: this.props.onFoodViewDetail.bind(this, this.props.info) },
+                _lang2.default.detail[this.props.language]
+            );
+        }
     }]);
 
     return PetFood;
 }(_react2.default.Component);
 
-exports.default = PetFood;
+var mapStateToProps = function mapStateToProps(state) {
+    return { language: state.language };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+        onFoodViewDetail: function onFoodViewDetail(food) {
+            dispatch((0, _action.viewFoodDetail)(food));
+        }
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(PetFood);
 
 /***/ }),
 /* 100 */
@@ -11306,6 +11363,53 @@ var FoodView = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
+            return _jquery2.default.isEmptyObject(this.props.food_detail) ? this.renderFoodPage() : this.renderDetail();
+        }
+    }, {
+        key: 'renderDetail',
+        value: function renderDetail() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'h2',
+                    { className: 'title' },
+                    _lang2.default.pet_food[this.props.language]
+                ),
+                _react2.default.createElement('img', { src: this.props.food_detail.image, className: 'detail-img' }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'detail-texts' },
+                    _react2.default.createElement(
+                        'p',
+                        { id: 'detail-name' },
+                        _lang2.default.product_name[this.props.language] + ' :  ',
+                        this.props.food_detail.name
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { id: 'detail-retail-price' },
+                        _lang2.default.retail_price[this.props.language] + ' :  ',
+                        this.props.food_detail.retail_price
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { id: 'detail-producer' },
+                        _lang2.default.producer[this.props.language] + ' :  ',
+                        this.props.food_detail.producer
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { id: 'detail-description' },
+                        _lang2.default.description[this.props.language] + ' :  ',
+                        this.props.food_detail.description
+                    )
+                )
+            );
+        }
+    }, {
+        key: 'renderFoodPage',
+        value: function renderFoodPage() {
             return _react2.default.createElement(
                 'div',
                 { id: 'food-view' },
@@ -11462,7 +11566,7 @@ var FoodView = function (_React$Component) {
 }(_react2.default.Component);
 
 var mapStateToProps = function mapStateToProps(state) {
-    return { language: state.language };
+    return { language: state.language, food_detail: state.food_detail };
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(FoodView);
@@ -11621,8 +11725,11 @@ var _redux = __webpack_require__(55);
 
 var _language = __webpack_require__(104);
 
+var _food = __webpack_require__(239);
+
 exports.default = (0, _redux.combineReducers)({
-    language: _language.language
+    language: _language.language,
+    food_detail: _food.food_detail
 });
 
 /***/ }),
@@ -11675,7 +11782,7 @@ exports = module.exports = __webpack_require__(107)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif; }\n\n.food {\n  background-color: white;\n  border-style: none;\n  border-radius: 0.1px;\n  padding-top: 20px;\n  margin: 20px;\n  width: 250px;\n  height: 300px;\n  display: inline-table; }\n  .food img {\n    max-height: 160px;\n    margin-left: auto;\n    margin-right: auto;\n    display: block; }\n  .food p {\n    font-family: Helvetica;\n    text-align: center; }\n\n.description {\n  font-size: 13px;\n  font-style: oblique; }\n\n.center {\n  display: inline-block;\n  margin: auto; }\n\n.title {\n  font-family: Helvetica, sans-serif, serif; }\n\n#food-panel {\n  display: block;\n  min-height: 300px;\n  text-align: center; }\n\n#price {\n  color: darkturquoise;\n  font-weight: bold;\n  font-size: 25; }\n\n#nav-button {\n  display: block;\n  text-align: center;\n  margin-top: 5px;\n  margin-bottom: 10px; }\n\n#page-number {\n  margin-left: 15px;\n  margin-right: 15px; }\n\n#header-navbar {\n  background-color: #7f8c8d;\n  height: 60px;\n  width: 100%;\n  display: block; }\n\n#footer {\n  width: 100%;\n  height: 250px;\n  background-color: #ecf0f1;\n  position: static;\n  bottom: 0px; }\n\n#footer-content {\n  height: 150px; }\n\n#develop-by {\n  color: black;\n  margin-left: auto;\n  margin-right: auto;\n  position: relative;\n  text-align: center; }\n\n#lang {\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center; }\n\n#logo {\n  width: 50px;\n  height: 50px;\n  display: inline-block;\n  position: absolute;\n  left: 20px; }\n\n#logo-text {\n  color: white;\n  position: absolute;\n  left: 80px;\n  display: block;\n  margin-bottom: 20px;\n  font-family: 'Merriweather', serif; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif; }\n\n.food {\n  background-color: white;\n  border-style: none;\n  border-radius: 0.1px;\n  padding-top: 20px;\n  margin: 20px;\n  width: 250px;\n  height: 300px;\n  display: inline-table; }\n  .food img {\n    max-height: 160px;\n    margin-left: auto;\n    margin-right: auto;\n    display: block; }\n  .food p {\n    font-family: Helvetica;\n    text-align: center; }\n\n.description {\n  font-size: 13px;\n  font-style: oblique; }\n\n.center {\n  display: inline-block;\n  margin: auto; }\n\n.title {\n  font-family: Helvetica, sans-serif, serif; }\n\n.detail-img {\n  max-width: 50%;\n  max-height: 512px;\n  margin-top: 50px;\n  margin-bottom: 50px;\n  display: inline-table; }\n\n.detail-texts {\n  display: inline-block;\n  width: 50%;\n  font-family: Arial, Helvetica, sans-serif; }\n\n#detail-name {\n  display: block;\n  font-size: 24px; }\n\n#detail-retail-price {\n  display: block;\n  font-size: 36px; }\n\n#detail-producer {\n  display: block;\n  font-size: 24px; }\n\n#detail-description {\n  display: block;\n  font-size: 24px; }\n\n#food-panel {\n  display: block;\n  min-height: 300px;\n  text-align: center; }\n\n#price {\n  color: darkturquoise;\n  font-weight: bold;\n  font-size: 25; }\n\n#nav-button {\n  display: block;\n  text-align: center;\n  margin-top: 5px;\n  margin-bottom: 10px; }\n\n#page-number {\n  margin-left: 15px;\n  margin-right: 15px; }\n\n#header-navbar {\n  background-color: #7f8c8d;\n  height: 60px;\n  width: 100%;\n  display: block; }\n\n#footer {\n  width: 100%;\n  height: 250px;\n  background-color: #ecf0f1;\n  position: static;\n  bottom: 0px; }\n\n#footer-content {\n  height: 150px; }\n\n#develop-by {\n  color: black;\n  margin-left: auto;\n  margin-right: auto;\n  position: relative;\n  text-align: center; }\n\n#lang {\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center; }\n\n#logo {\n  width: 50px;\n  height: 50px;\n  display: inline-block;\n  position: absolute;\n  left: 20px; }\n\n#logo-text {\n  color: white;\n  position: absolute;\n  left: 80px;\n  display: block;\n  margin-bottom: 20px;\n  font-family: 'Merriweather', serif; }\n", ""]);
 
 // exports
 
@@ -25497,6 +25604,28 @@ module.exports = jQuery;
 __webpack_require__(34);
 module.exports = __webpack_require__(34);
 
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var food_detail = exports.food_detail = function food_detail() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var action = arguments[1];
+
+    switch (action.type) {
+        case 'FOOD_DETAIL':
+            return action.food;
+        default:
+            return state;
+    }
+};
 
 /***/ })
 /******/ ]);

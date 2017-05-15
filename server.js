@@ -23,5 +23,5 @@ app.get('/foodlist', function (req, res) {
 
 
 var http = app.listen(app.get('port'), function (req, res) {
-    console.log('Server started at port: ' + 8000);
+    console.log('Server started at port: ' + app.get('port'));
 });

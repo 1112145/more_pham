@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import Food from 'components/PetFood';
 import device from 'ultils/DeviceHelper';
@@ -41,6 +41,22 @@ class FoodView extends React.Component {
     }
 
     render() {
+        return ($.isEmptyObject(this.props.food_detail)) ? this.renderFoodPage() : this.renderDetail();
+    }
+
+    renderDetail() {
+        return <div><h2 className='title'>{TEXT.pet_food[this.props.language]}</h2>
+            <img src={this.props.food_detail.image} className='detail-img'></img>
+            <div className='detail-texts'>
+                <p id='detail-name'>{TEXT.product_name[this.props.language] + ' :  '}{this.props.food_detail.name}</p>
+                <p id='detail-retail-price'>{TEXT.retail_price[this.props.language] + ' :  '}{this.props.food_detail.retail_price}</p>
+                <p id='detail-producer'>{TEXT.producer[this.props.language] + ' :  '}{this.props.food_detail.producer}</p>
+                <p id='detail-description'>{TEXT.description[this.props.language] + ' :  '}{this.props.food_detail.description}</p>
+            </div>
+        </div>
+    }
+
+    renderFoodPage() {
         return (<div id='food-view'>
             <h2 className='title'>{TEXT.pet_food[this.props.language]}</h2>
             {this.renderFilterButtons()}
@@ -52,7 +68,7 @@ class FoodView extends React.Component {
     renderFoods(foods) {
         var elements = [];
         for (var i = 0; i < foods.length; i++) {
-            elements.push(<Food key={i} info={foods[i]}></Food>)
+            elements.push(<Food key={i} info={foods[i]}></Food>);
         }
         return elements;
     }
@@ -92,7 +108,7 @@ class FoodView extends React.Component {
     }
 
     renderNavButtons() {
-         var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
+        var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
             this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
 
         var element = <div id='nav-button'>
@@ -140,7 +156,7 @@ class FoodView extends React.Component {
 }
 
 const mapStateToProps = function (state) {
-    return { language: state.language }
+    return { language: state.language, food_detail: state.food_detail }
 }
 
 export default connect(mapStateToProps, null)(FoodView);
