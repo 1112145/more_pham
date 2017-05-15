@@ -12,10 +12,12 @@ app.use(express.static(path.resolve(PATH_CLIENT_FOLDER, 'dist')));
 app.use(express.static(__dirname));
 
 app.get('/', function (req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
     res.sendFile(PATH_CLIENT_FOLDER + '/dist/index.html');
 });
 
 app.get('/foodlist', function (req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
     res.send(JSON.stringify(db.getFoodList()));
 });
 
