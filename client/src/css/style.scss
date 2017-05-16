@@ -43,6 +43,7 @@ body {
 
 .detail-img {
     max-width: 50%;
+    min-width: 20%;
     max-height: 512px;
     margin-top: auto;
     margin-bottom: auto;
@@ -51,7 +52,7 @@ body {
 
 .detail-texts {
     display: inline-block;
-    width: 50%;
+    max-width: 50%;
     font-family:Arial, Helvetica, sans-serif;
 }
 
