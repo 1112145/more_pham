@@ -395,7 +395,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Me O Adult 350g",
 		"image": "./assets/images/demo.jpg",
 		"description": "Vị cá ngừ Dành cho mèo trưởng thành",
@@ -403,7 +403,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Me O Adult 1,3kg",
 		"image": "./assets/images/demo.jpg",
 		"description": "Vị cá ngừ Dành cho mèo trưởng thành",
@@ -412,7 +412,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Me O Kitten 400g",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành cho mèo con",
@@ -420,7 +420,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Me O kitten 1,2kg",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành cho mèo con",
@@ -429,7 +429,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Blisk 500g",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành cho mèo ở mọi lứa tuổi",
@@ -437,7 +437,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Whiskas 400g",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành mèo trưởng thành",
@@ -445,7 +445,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Whiskas 1,2kg",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành mèo trưởng thành",
@@ -454,7 +454,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Whiskas 3kg",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành mèo trưởng thành",
@@ -462,7 +462,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Felipro 500g",
 		"image": "./assets/images/demo.jpg",
 		"description": "Hương vị hải sản Dành cho mèo ở mọi lứa tuổi",
@@ -471,7 +471,7 @@
 	},
 	{
 		"producer": "Popular",
-		"pet_type": "Dog",
+		"pet_type": "Cat",
 		"name": "Star pro 400g",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành cho mèo ở mọi lứa tuổi",
@@ -545,7 +545,7 @@
 	{
 		"producer": "Popular",
 		"pet_type": "Dog",
-		"name": "Classic Pét hưng vị bò 400g",
+		"name": "Classic Pét hương vị bò 400g",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "15.000đ"
@@ -553,7 +553,7 @@
 	{
 		"producer": "Popular",
 		"pet_type": "Dog",
-		"name": "Classic Pét hưng vị bò 2kg",
+		"name": "Classic Pét hương vị bò 2kg",
 		"image": "./assets/images/demo.jpg",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "105.000đ"
