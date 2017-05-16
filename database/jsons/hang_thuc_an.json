@@ -3,7 +3,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Mini Junior 800g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/1.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng dưới 10kg khi trưởng thành ",
 		"retail_price": "155.000đ",
 		"cost_price": ""
@@ -12,7 +12,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Mini Junior 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/1.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng dưới 10kg khi trưởng thành ",
 		"retail_price": "331.000đ",
 		"cost_price": ""
@@ -21,7 +21,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Mini Junior 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/1.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng dưới 10kg khi trưởng thành ",
 		"retail_price": "1.100.000đ",
 		"cost_price": ""
@@ -30,7 +30,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Medium Junior 1kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/2.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng từ 11-25 kg khi trưởng thành",
 		"retail_price": "146.000đ",
 		"cost_price": ""
@@ -39,7 +39,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Medium Junior 4kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/2.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng từ 11-25 kg khi trưởng thành",
 		"retail_price": "472.000đ",
 		"cost_price": ""
@@ -48,7 +48,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Medium Junior 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/2.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng từ 11-25 kg khi trưởng thành",
 		"retail_price": "1.050.000đ",
 		"cost_price": ""
@@ -57,7 +57,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Maxi Junior 1kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/3.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng từ 26-44kg khi trưởng thành",
 		"retail_price": "156.000đ",
 		"cost_price": ""
@@ -66,7 +66,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Maxi Junior 4kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/3.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng từ 26-44kg khi trưởng thành",
 		"retail_price": "344.000đ",
 		"cost_price": ""
@@ -75,7 +75,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Maxi Junior 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/3.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng từ 26-44kg khi trưởng thành",
 		"retail_price": "Không thấy",
 		"cost_price": ""
@@ -84,7 +84,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Mini Adult 800g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/4.png",
 		"description": "Dành cho chó trưởng thành dưới 10kg",
 		"retail_price": "134.000đ",
 		"cost_price": ""
@@ -93,7 +93,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Mini Adult 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/4.png",
 		"description": "Dành cho chó trưởng thành dưới 10kg",
 		"retail_price": "260.000đ",
 		"cost_price": ""
@@ -102,7 +102,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Medium Adult 1kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/5.png",
 		"description": "Dành cho chó trưởng thành từ 11-25kg",
 		"retail_price": "124.000đ",
 		"cost_price": ""
@@ -111,7 +111,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Medium Adult 4kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/5.png",
 		"description": "Dành cho chó trưởng thành từ 11-25kg",
 		"retail_price": "420.000đ",
 		"cost_price": ""
@@ -120,7 +120,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Medium Adult 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/5.png",
 		"description": "Dành cho chó trưởng thành từ 11-25kg",
 		"retail_price": "910.000đ",
 		"cost_price": ""
@@ -129,7 +129,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Maxi Adult 1kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/6.png",
 		"description": "Dành cho chó trưởng thành từ 26-44kg",
 		"retail_price": "120.000đ",
 		"cost_price": ""
@@ -138,7 +138,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Max Adult 4kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/6.png",
 		"description": "Dành cho chó trưởng thành từ 26-44kg",
 		"retail_price": "420.000đ"
 	},
@@ -146,7 +146,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Maxi Adult 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/6.png",
 		"description": "Dành cho chó trưởng thành từ 26-44kg",
 		"retail_price": "899.000đ"
 	},
@@ -154,7 +154,7 @@
 		"producer": "Royal",
 		"pet_type": "Dog",
 		"name": "Mobility 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/7.png",
 		"description": "Dành cho chó bị bệnh gan mật",
 		"retail_price": "400.000đ",
 		"cost_price": ""
@@ -163,7 +163,7 @@
 		"producer": "Royal",
 		"pet_type": "SickDog",
 		"name": "Uninary 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/8.png",
 		"description": "Dành cho chó đang bị bệnh về đường tiết niệu",
 		"retail_price": "379.000đ"
 	},
@@ -171,7 +171,7 @@
 		"producer": "Royal",
 		"pet_type": "SickDog",
 		"name": "Obesity 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/9.png",
 		"description": "Dành cho chó đang bị béo phì",
 		"retail_price": "270.000đ"
 	},
@@ -179,7 +179,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": " Kitten 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/10.png",
 		"description": "Mèo con dưới 12 tháng tuổi",
 		"retail_price": "316.000đ"
 	},
@@ -187,7 +187,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": "Kitten 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/10.png",
 		"description": "Mèo con dưới 12 tháng tuổi",
 		"retail_price": "79.000đ"
 	},
@@ -195,7 +195,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": "FIT 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/11.png",
 		"description": "Cho mèo trưởng thành",
 		"retail_price": "312.000đ"
 	},
@@ -203,7 +203,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": "FIT 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/11.png",
 		"description": "Cho mèo trưởng thành",
 		"retail_price": "74.000đ"
 	},
@@ -211,7 +211,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": "Home life INDOOR 400kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/12.png",
 		"description": "Cho mèo trưởng thành ít vận động",
 		"retail_price": "80.000đ"
 	},
@@ -219,7 +219,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": "Home life INDOOR 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/12.png",
 		"description": "Cho mèo trưởng thành ít vận động",
 		"retail_price": "310.000đ"
 	},
@@ -227,7 +227,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": "Mother & Baby Mèo 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/13.png",
 		"description": "Dành cho mèo con và mèo mẹ đang nuôi con",
 		"retail_price": "320.000đ"
 	},
@@ -235,7 +235,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": "Mother & Baby Mèo 4kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/13.png",
 		"description": "Dành cho mèo con và mèo mẹ đang nuôi con",
 		"retail_price": "620.000đ"
 	},
@@ -243,7 +243,7 @@
 		"producer": "Royal",
 		"pet_type": "Cat",
 		"name": "Mother & Baby Mèo 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/13.png",
 		"description": "Dành cho mèo con và mèo mẹ đang nuôi con",
 		"retail_price": "76.000đ"
 	},
@@ -251,7 +251,7 @@
 		"producer": "Royal",
 		"pet_type": "SickCat",
 		"name": "Renal 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/14.png",
 		"description": "Dành cho mèo đang bị bệnh thận",
 		"retail_price": "429.000đ"
 	},
@@ -259,7 +259,7 @@
 		"producer": "Royal",
 		"pet_type": "SickCat",
 		"name": "Urinary 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/15.png",
 		"description": "Dành cho mèo đang bị bệnh tiết niệu",
 		"retail_price": "284.000đ"
 	},
@@ -267,7 +267,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Mini Puppy 3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/16.png",
 		"description": "Dành cho chó con khi trưởng thành dưới 13kg",
 		"retail_price": "274.000đ"
 	},
@@ -275,7 +275,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Mini Puppy 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/16.png",
 		"description": "Dành cho chó con khi trưởng thành dưới 13kg",
 		"retail_price": "1.205.000đ"
 	},
@@ -283,7 +283,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Medium Puppy3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/17.png",
 		"description": "Dành cho chó con khi trưởng thành từ 13-35kg",
 		"retail_price": "249.000đ"
 	},
@@ -291,7 +291,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Maxi Puppy 3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/18.png",
 		"description": "Dành cho chó con khi trưởng thành trên 35kg",
 		"retail_price": "288.000đ"
 	},
@@ -299,7 +299,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Fitmin for life puppy 3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/19.png",
 		"description": "Dành cho tất cả các loại chó con",
 		"retail_price": "176.000đ"
 	},
@@ -307,7 +307,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Fitmin for life puupy 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/19.png",
 		"description": "Dành cho tất cả các loại chó con",
 		"retail_price": "835.000đ"
 	},
@@ -315,7 +315,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Fitmin for life adult 3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/20.png",
 		"description": "Dành cho tát cả các loại chó trưởng thành",
 		"retail_price": "170.000đ"
 	},
@@ -323,7 +323,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Fitmin for life Junior large breeds 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/21.png",
 		"description": "Dành cho các loại chó lớn đang trong giai doạn phát triển",
 		"retail_price": "873.000đ"
 	},
@@ -331,7 +331,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Medium Performance 3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/22.png",
 		"description": "Dành cho chó trung từ 13-35kg",
 		"retail_price": "262.000đ"
 	},
@@ -339,7 +339,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Medium Performance 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/22.png",
 		"description": "Dành cho chó trung từ 13-35kg",
 		"retail_price": "1.040.000đ"
 	},
@@ -347,7 +347,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Dog",
 		"name": "Maxi Performance 10kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/23.png",
 		"description": "Dành cho chó trưởng thành trên 35kg",
 		"retail_price": "1.067.000đ"
 	},
@@ -355,7 +355,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Cat",
 		"name": "Fitmin Kitten 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/24.png",
 		"description": "Dành cho mèo con đến 12 tháng tuổi mèo đang mang thai",
 		"retail_price": "70.000đ",
 		"cost_price": ""
@@ -364,7 +364,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Cat",
 		"name": "Fitmin Kitten 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/24.png",
 		"description": "Dành cho mèo con đến 12 tháng tuổi  mèo đang mang thai",
 		"retail_price": "288.000đ",
 		"cost_price": ""
@@ -373,7 +373,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Cat",
 		"name": "Adult salmon 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/25.png",
 		"description": "Cho mèo lớn hương cá hồi",
 		"retail_price": "245.000đ"
 	},
@@ -381,7 +381,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Cat",
 		"name": "Adult salmon 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/25.png",
 		"description": "Cho mèo lớn hương cá hồi",
 		"retail_price": "65.000đ"
 	},
@@ -389,7 +389,7 @@
 		"producer": "Fitmin",
 		"pet_type": "Cat",
 		"name": "Adult hairball 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/26.png",
 		"description": "Giúp chống rụng lông cho mèo",
 		"retail_price": "245.000đ"
 	},
@@ -397,7 +397,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Me O Adult 350g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/27.png",
 		"description": "Vị cá ngừ Dành cho mèo trưởng thành",
 		"retail_price": "22.000đ"
 	},
@@ -405,7 +405,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Me O Adult 1,3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/27.png",
 		"description": "Vị cá ngừ Dành cho mèo trưởng thành",
 		"retail_price": "110.000đ",
 		"cost_price": ""
@@ -414,7 +414,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Me O Kitten 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/28.png",
 		"description": "Dành cho mèo con",
 		"retail_price": "45.000đ"
 	},
@@ -422,7 +422,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Me O kitten 1,2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/28.png",
 		"description": "Dành cho mèo con",
 		"retail_price": "110.000đ",
 		"cost_price": ""
@@ -431,7 +431,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Blisk 500g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/29.png",
 		"description": "Dành cho mèo ở mọi lứa tuổi",
 		"retail_price": "27.000đ"
 	},
@@ -439,7 +439,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Whiskas 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/30.png",
 		"description": "Dành mèo trưởng thành",
 		"retail_price": "30.000đ"
 	},
@@ -447,7 +447,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Whiskas 1,2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/30.png",
 		"description": "Dành mèo trưởng thành",
 		"retail_price": "115.000đ",
 		"cost_price": ""
@@ -456,7 +456,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Whiskas 3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/30.png",
 		"description": "Dành mèo trưởng thành",
 		"retail_price": "285.000đ"
 	},
@@ -464,7 +464,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Felipro 500g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/31.png",
 		"description": "Hương vị hải sản Dành cho mèo ở mọi lứa tuổi",
 		"retail_price": "30.000đ",
 		"cost_price": ""
@@ -473,7 +473,7 @@
 		"producer": "Popular",
 		"pet_type": "Cat",
 		"name": "Star pro 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/32.png",
 		"description": "Dành cho mèo ở mọi lứa tuổi",
 		"retail_price": "35.000đ"
 	},
@@ -481,7 +481,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Pedigree Adult 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/33.png",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "17.000đ"
 	},
@@ -489,7 +489,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Pedigree Adult 1,5kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/33.png",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "95.000đ",
 		"cost_price": ""
@@ -498,7 +498,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Pedigree Adult 3kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/33.png",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "185.000đ"
 	},
@@ -506,7 +506,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Pedigree Puppy 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/34.png",
 		"description": "Dành cho chó con",
 		"retail_price": "25.000đ"
 	},
@@ -514,7 +514,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Smartheart vị bò nướng",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/35.png",
 		"description": "Cho chó trưởng thành",
 		"retail_price": "18.000đ"
 	},
@@ -522,7 +522,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Smartheart vị thịt bf & sữa",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/36.png",
 		"description": "Cho chó con",
 		"retail_price": "25.000đ"
 	},
@@ -530,7 +530,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Ganador premium Puppy 500g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/37.png",
 		"description": "Dành cho chó con",
 		"retail_price": "23.000đ"
 	},
@@ -538,7 +538,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Ganador Premium Adult 500g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/38.png",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "18.000đ"
 	},
@@ -546,7 +546,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Classic Pét hương vị bò 400g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/39.png",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "15.000đ"
 	},
@@ -554,7 +554,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Classic Pét hương vị bò 2kg",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/39.png",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "105.000đ"
 	},
@@ -562,7 +562,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Advantage Adult 500g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/40.png",
 		"description": "Dành cho chó trưởng thành",
 		"retail_price": "32.000đ"
 	},
@@ -570,7 +570,7 @@
 		"producer": "Popular",
 		"pet_type": "Dog",
 		"name": "Advantage Puppy 500g",
-		"image": "./assets/images/demo.jpg",
+		"image": "./assets/images/foods/41.png",
 		"description": "Cho chó con",
 		"retail_price": "38.000đ"
 	}
