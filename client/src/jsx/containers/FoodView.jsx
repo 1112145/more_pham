@@ -9,8 +9,8 @@ import TEXT from 'ultils/lang';
 
 
 const API = {
-    // url_food_list: 'https://petzone.herokuapp.com/foodlist'
-     url_food_list: 'http://localhost:8000/foodlist'
+    url_food_list: 'https://petzone.herokuapp.com/foodlist'
+     //url_food_list: 'http://localhost:8000/foodlist'
 }
 
 
