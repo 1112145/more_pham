@@ -58,6 +58,14 @@ export default {
     description: {
         en: 'Description',
         vi: 'Mô tả'
+    },
+    other_food: {
+        en: 'Other foods',
+        vi: 'Thức ăn khác'
+    },
+    call_us: {
+        en: 'Call us',
+        vi: 'Gọi chúng tôi'
     }
 
 }

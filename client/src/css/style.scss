@@ -44,8 +44,8 @@ body {
 .detail-img {
     max-width: 50%;
     max-height: 512px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
     display: inline-table;
 }
 
@@ -58,22 +58,22 @@ body {
 
 #detail-name {
     display: block;
-    font-size: 24px;
+    font-size: 2vmax;
 }
 
 #detail-retail-price {
     display: block;
-    font-size: 36px;
+    font-size: 3.6vmax;
 }
 
 #detail-producer {
     display: block;
-    font-size: 24px;
+    font-size: 2vmax;
 }
 
 #detail-description {
     display: block;
-    font-size: 24px;
+    font-size: 2vmax;
 }
 
 
@@ -86,7 +86,7 @@ body {
 #price {
     color: darkturquoise;
     font-weight: bold;
-    font-size: 25;
+    font-size: 25px;
 }
 
 #nav-button {
@@ -152,6 +152,18 @@ body {
     display: block;
     margin-bottom: 20px;
     font-family: 'Merriweather', serif;
+}
+
+#btn-call-us{
+    display: block;
+    margin-top: 20px;
+    font-size: 2vmax;
+}
+
+#btn-other-food {
+    display: block;
+    margin-top: 20px;
+    font-size: 2vmax;
 }
 
 

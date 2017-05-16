@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import { connect } from 'react-redux';
 
+import { viewFoodDetail } from 'actions/action';
 import Food from 'components/PetFood';
 import device from 'ultils/DeviceHelper';
 import TEXT from 'ultils/lang';
@@ -52,7 +53,10 @@ class FoodView extends React.Component {
                 <p id='detail-retail-price'>{TEXT.retail_price[this.props.language] + ' :  '}{this.props.food_detail.retail_price}</p>
                 <p id='detail-producer'>{TEXT.producer[this.props.language] + ' :  '}{this.props.food_detail.producer}</p>
                 <p id='detail-description'>{TEXT.description[this.props.language] + ' :  '}{this.props.food_detail.description}</p>
+                <button id='btn-call-us' className='btn btn-success'>{TEXT.call_us[this.props.language]}</button>
+                <button id='btn-other-food' className='btn btn-info' onClick={this.onClickBtnOtherProduct.bind(this)}>{TEXT.other_food[this.props.language]}</button>
             </div>
+
         </div>
     }
 
@@ -145,6 +149,10 @@ class FoodView extends React.Component {
             this.updateState();
         }
 
+    }
+
+    onClickBtnOtherProduct() {
+        this.props.dispatch(viewFoodDetail({}));
     }
 
     updateState() {
