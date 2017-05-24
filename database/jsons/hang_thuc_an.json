@@ -77,7 +77,7 @@
 		"name": "Maxi Junior 10kg",
 		"image": "./assets/images/foods/3.png",
 		"description": "Dành cho chó đang phát triển có trọng lượng từ 26-44kg khi trưởng thành",
-		"retail_price": "Không thấy",
+		"retail_price": "Đang cập nhật",
 		"cost_price": ""
 	},
 	{
@@ -162,9 +162,9 @@
 	{
 		"producer": "Royal",
 		"pet_type": "SickDog",
-		"name": "Uninary 2kg",
+		"name": "Urinary 2kg",
 		"image": "./assets/images/foods/8.png",
-		"description": "Dành cho chó đang bị bệnh về đường tiết niệu",
+		"description": "Dành cho chó đang bị bệnh về đường tiết niệu, bệnh về bàng quang",
 		"retail_price": "379.000đ"
 	},
 	{
@@ -260,7 +260,7 @@
 		"pet_type": "SickCat",
 		"name": "Urinary 2kg",
 		"image": "./assets/images/foods/15.png",
-		"description": "Dành cho mèo đang bị bệnh tiết niệu",
+		"description": "Dành cho mèo đang bị bệnh tiết niệu, bệnh về bàng quang",
 		"retail_price": "284.000đ"
 	},
 	{

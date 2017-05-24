@@ -54,7 +54,9 @@ class FoodView extends React.Component {
                 <p id='detail-retail-price'>{TEXT.retail_price[this.props.language] + ' :  '}{this.props.food_detail.retail_price}</p>
                 <p id='detail-producer'>{TEXT.producer[this.props.language] + ' :  '}{this.props.food_detail.producer}</p>
                 <p id='detail-description'>{TEXT.description[this.props.language] + ' :  '}{this.props.food_detail.description}</p>
-                <button id='btn-call-us' className='btn btn-success'>{TEXT.call_us[this.props.language]}</button>
+                <button id='btn-call-us' className='btn btn-success'>
+                    {(!device.isMobile())?TEXT.call_us[this.props.language]: <a href='tel:01693689453'>{TEXT.call_us[this.props.language]}</a>}
+                </button>
                 <button id='btn-other-food' className='btn btn-info' onClick={this.onClickBtnOtherProduct.bind(this)}>{TEXT.other_food[this.props.language]}</button>
             </div>
 
