@@ -43,11 +43,15 @@ class FoodView extends React.Component {
     }
 
     render() {
-        return ($.isEmptyObject(this.props.food_detail)) ? this.renderFoodPage() : this.renderDetail();
+        return (<div>
+            <h2 className='title'>{TEXT.pet_food[this.props.language]} <img src="https://image.flaticon.com/icons/svg/372/372936.svg" height="72px"/></h2>
+            
+            {($.isEmptyObject(this.props.food_detail)) ? this.renderFoodPage() : this.renderDetail()}
+        </div>);
     }
 
     renderDetail() {
-        return <div><h2 className='title'>{TEXT.pet_food[this.props.language]}</h2>
+        return <div>
             <div className='detail-img-container'>
                 <img src={this.props.food_detail.image} className='detail-img'></img>
             </div>
@@ -68,7 +72,6 @@ class FoodView extends React.Component {
 
     renderFoodPage() {
         return (<div id='food-view'>
-            <h2 className='title'>{TEXT.pet_food[this.props.language]}</h2>
             {this.renderFilterButtons()}
             <div id='food-panel' >{this.renderFoods(this.state.visibleFoods)}</div>
             {this.renderNavButtons()}

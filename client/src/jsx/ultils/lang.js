@@ -25,11 +25,11 @@ export default {
     },
     sick_dog: {
         en: 'Sick dog',
-        vi: 'Chó đang bệnh'
+        vi: 'Chó bệnh'
     },
     sick_cat: {
         en: 'Sick cat',
-        vi: 'Mèo đang bệnh'
+        vi: 'Mèo bệnh'
     },
     all: {
         en: 'All',
