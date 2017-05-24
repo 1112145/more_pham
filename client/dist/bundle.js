@@ -11387,10 +11387,14 @@ var FoodView = function (_React$Component) {
                     { className: 'title' },
                     _lang2.default.pet_food[this.props.language]
                 ),
-                _react2.default.createElement('img', { src: this.props.food_detail.image, className: 'detail-img' }),
                 _react2.default.createElement(
                     'div',
-                    { className: 'detail-texts' },
+                    { className: 'detail-img-container' },
+                    _react2.default.createElement('img', { src: this.props.food_detail.image, className: 'detail-img' })
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'detail-infors' },
                     _react2.default.createElement(
                         'p',
                         { id: 'detail-name' },
@@ -11420,8 +11424,13 @@ var FoodView = function (_React$Component) {
                         { id: 'btn-call-us', className: 'btn btn-success' },
                         !_DeviceHelper2.default.isMobile() ? _lang2.default.call_us[this.props.language] : _react2.default.createElement(
                             'a',
-                            { href: 'tel:01693689453' },
+                            { href: 'tel:+841693689453' },
                             _lang2.default.call_us[this.props.language]
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            '(+84) 987 459 907'
                         )
                     ),
                     _react2.default.createElement(
@@ -11727,7 +11736,7 @@ var NavBar = function (_React$Component) {
                 { id: 'header-navbar' },
                 _react2.default.createElement('img', { id: 'logo', src: '/assets/images/logo.png' }),
                 _react2.default.createElement(
-                    'h1',
+                    'div',
                     { id: 'logo-text' },
                     'PET ZONE'
                 )
@@ -11834,7 +11843,7 @@ exports = module.exports = __webpack_require__(108)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif; }\n\n.food {\n  background-color: white;\n  border-style: none;\n  border-radius: 0.1px;\n  padding-top: 20px;\n  margin: 20px;\n  width: 250px;\n  height: 300px;\n  display: inline-table; }\n  .food img {\n    max-height: 160px;\n    margin-left: auto;\n    margin-right: auto;\n    display: block; }\n  .food p {\n    font-family: Helvetica;\n    text-align: center; }\n\n.description {\n  font-size: 13px;\n  font-style: oblique; }\n\n.center {\n  display: inline-block;\n  margin: auto; }\n\n.title {\n  font-family: Helvetica, sans-serif, serif; }\n\n.detail-img {\n  max-width: 50%;\n  min-width: 20%;\n  max-height: 512px;\n  margin-top: auto;\n  margin-bottom: auto;\n  display: inline-table; }\n\n.detail-texts {\n  display: inline-block;\n  max-width: 50%;\n  font-family: Arial, Helvetica, sans-serif; }\n\n#detail-name {\n  display: block;\n  font-size: 2vmax; }\n\n#detail-retail-price {\n  display: block;\n  font-size: 3.6vmax; }\n\n#detail-producer {\n  display: block;\n  font-size: 2vmax; }\n\n#detail-description {\n  display: block;\n  font-size: 2vmax; }\n\n#food-panel {\n  display: block;\n  min-height: 300px;\n  text-align: center; }\n\n#price {\n  color: darkturquoise;\n  font-weight: bold;\n  font-size: 25px; }\n\n#nav-button {\n  display: block;\n  text-align: center;\n  margin-top: 5px;\n  margin-bottom: 10px; }\n\n#page-number {\n  margin-left: 15px;\n  margin-right: 15px; }\n\n#header-navbar {\n  background-color: black;\n  height: 60px;\n  width: 100%;\n  display: block; }\n\n#footer {\n  width: 100%;\n  height: 250px;\n  background-color: #fff44f;\n  position: static;\n  bottom: 0px; }\n\n#footer-content {\n  height: 150px; }\n\n#develop-by {\n  color: black;\n  margin-left: auto;\n  margin-right: auto;\n  position: relative;\n  text-align: center; }\n\n#lang {\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center; }\n\n#logo {\n  width: 50px;\n  height: 50px;\n  display: inline-block;\n  position: absolute;\n  left: 20px; }\n\n#logo-text {\n  color: white;\n  position: absolute;\n  left: 80px;\n  display: block;\n  margin-bottom: 20px;\n  font-family: 'Merriweather', serif; }\n\n#btn-call-us {\n  display: block;\n  margin-top: 20px;\n  font-size: 2vmax; }\n\n#btn-other-food {\n  display: block;\n  margin-top: 20px;\n  font-size: 2vmax; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif; }\n\n.food {\n  background-color: white;\n  border-style: none;\n  border-radius: 0.1px;\n  padding-top: 20px;\n  margin: 20px;\n  width: 250px;\n  height: 300px;\n  display: inline-table; }\n  .food img {\n    max-height: 160px;\n    margin-left: auto;\n    margin-right: auto;\n    display: block; }\n  .food p {\n    font-family: Helvetica;\n    text-align: center; }\n\n.description {\n  font-size: 13px;\n  font-style: oblique; }\n\n.center {\n  display: inline-block;\n  margin: auto; }\n\n.title {\n  font-family: Helvetica, sans-serif, serif; }\n\n.detail-img-container {\n  width: 50%;\n  display: inline-block;\n  margin-bottom: 5%;\n  margin-top: 5%; }\n\n.detail-img {\n  display: block;\n  margin: auto;\n  min-width: 50%; }\n\n.detail-infors {\n  display: inline-block;\n  width: 50%;\n  font-family: Arial, Helvetica, sans-serif;\n  padding-bottom: 30px; }\n\n#detail-name {\n  display: block;\n  font-size: 2vmax; }\n\n#detail-retail-price {\n  display: block;\n  font-size: 3.6vmax;\n  color: #3498db; }\n\n#detail-producer {\n  display: block;\n  font-size: 2vmax; }\n\n#detail-description {\n  display: block;\n  font-size: 2vmax; }\n\n#food-panel {\n  display: block;\n  min-height: 300px;\n  text-align: center; }\n\n#price {\n  color: darkturquoise;\n  font-weight: bold;\n  font-size: 25px; }\n\n#nav-button {\n  display: block;\n  text-align: center;\n  margin-top: 5px;\n  margin-bottom: 10px; }\n\n#page-number {\n  margin-left: 15px;\n  margin-right: 15px; }\n\n#header-navbar {\n  background-color: black;\n  height: 60px;\n  width: 100%;\n  display: block; }\n\n#footer {\n  width: 100%;\n  height: 250px;\n  background-color: #fff44f;\n  position: static;\n  bottom: 0px; }\n\n#footer-content {\n  height: 150px; }\n\n#develop-by {\n  color: black;\n  margin-left: auto;\n  margin-right: auto;\n  position: relative;\n  text-align: center; }\n\n#lang {\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center; }\n\n#logo {\n  width: 50px;\n  height: 50px;\n  display: inline-block;\n  position: absolute;\n  left: 20px; }\n\n#logo-text {\n  color: white;\n  position: absolute;\n  font-size: 24px;\n  left: 80px;\n  top: 15px;\n  display: block;\n  font-family: 'Merriweather', serif; }\n\n#btn-call-us {\n  display: block;\n  margin-top: 20px;\n  font-size: 2vmax; }\n  #btn-call-us a {\n    color: white; }\n\n#btn-other-food {\n  display: block;\n  margin-top: 20px;\n  font-size: 2vmax; }\n", ""]);
 
 // exports
 

@@ -41,19 +41,24 @@ body {
     font-family: Helvetica, sans-serif, serif;
 }
 
-.detail-img {
-    max-width: 50%;
-    min-width: 20%;
-    max-height: 512px;
-    margin-top: auto;
-    margin-bottom: auto;
-    display: inline-table;
+.detail-img-container{
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
-.detail-texts {
+.detail-img {
+    display: block;
+    margin: auto;
+    min-width: 50%;
+}
+
+.detail-infors {
     display: inline-block;
-    max-width: 50%;
+    width: 50%;
     font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 30px;
 }
 
 
@@ -65,6 +70,7 @@ body {
 #detail-retail-price {
     display: block;
     font-size: 3.6vmax;
+    color: #3498db;
 }
 
 #detail-producer {
@@ -149,9 +155,10 @@ body {
 #logo-text {
     color: white;
     position: absolute;
+    font-size: 24px;
     left: 80px;
+    top: 15px;
     display: block;
-    margin-bottom: 20px;
     font-family: 'Merriweather', serif;
 }
 
@@ -159,6 +166,9 @@ body {
     display: block;
     margin-top: 20px;
     font-size: 2vmax;
+    a {
+        color: white;
+    }
 }
 
 #btn-other-food {

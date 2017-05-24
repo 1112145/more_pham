@@ -10,7 +10,7 @@ import TEXT from 'ultils/lang';
 
 const API = {
     url_food_list: 'https://petzone.herokuapp.com/foodlist'
-     //url_food_list: 'http://localhost:8000/foodlist'
+    //url_food_list: 'http://localhost:8000/foodlist'
 }
 
 
@@ -48,14 +48,17 @@ class FoodView extends React.Component {
 
     renderDetail() {
         return <div><h2 className='title'>{TEXT.pet_food[this.props.language]}</h2>
-            <img src={this.props.food_detail.image} className='detail-img'></img>
-            <div className='detail-texts'>
+            <div className='detail-img-container'>
+                <img src={this.props.food_detail.image} className='detail-img'></img>
+            </div>
+            <div className='detail-infors'>
                 <p id='detail-name'>{TEXT.product_name[this.props.language] + ' :  '}{this.props.food_detail.name}</p>
                 <p id='detail-retail-price'>{TEXT.retail_price[this.props.language] + ' :  '}{this.props.food_detail.retail_price}</p>
                 <p id='detail-producer'>{TEXT.producer[this.props.language] + ' :  '}{this.props.food_detail.producer}</p>
                 <p id='detail-description'>{TEXT.description[this.props.language] + ' :  '}{this.props.food_detail.description}</p>
                 <button id='btn-call-us' className='btn btn-success'>
-                    {(!device.isMobile())?TEXT.call_us[this.props.language]: <a href='tel:01693689453'>{TEXT.call_us[this.props.language]}</a>}
+                    {(!device.isMobile()) ? TEXT.call_us[this.props.language] : <a href='tel:+841693689453'>{TEXT.call_us[this.props.language]}</a>}
+                    <p>(+84) 987 459 907</p>
                 </button>
                 <button id='btn-other-food' className='btn btn-info' onClick={this.onClickBtnOtherProduct.bind(this)}>{TEXT.other_food[this.props.language]}</button>
             </div>
