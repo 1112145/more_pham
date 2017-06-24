@@ -3,7 +3,7 @@ import style from 'css/style.scss';
 import { connect } from 'react-redux';
 import { viewFoodDetail } from 'actions/action';
 import TEXT from 'ultils/lang';
-import { Image } from 'semantic-ui-react';
+import { Image, Container, Button } from 'semantic-ui-react';
 
 
 class PetFood extends React.Component {
@@ -13,12 +13,12 @@ class PetFood extends React.Component {
     }
 
     render() {
-        return (<div className="food">
+        return (<Container className="food">
             {this.renderImage()}
             {this.renderName()}
             {this.renderPrice()}
             {this.renderDetailButton()}
-        </div>);
+        </Container>);
     }
 
     renderName() {
@@ -42,8 +42,8 @@ class PetFood extends React.Component {
     }
 
     renderDetailButton() {
-        return <button className='btn btn-warning' onClick={this.props.onFoodViewDetail.bind(this,this.props.info)}>
-            {TEXT.detail[this.props.language]}</button>
+        return <Button color='blue' className='btn btn-warning' onClick={this.props.onFoodViewDetail.bind(this,this.props.info)}>
+            {TEXT.detail[this.props.language]}</Button>
     }
 
 }

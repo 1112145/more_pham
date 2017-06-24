@@ -3,19 +3,19 @@ import { connect } from 'react-redux';
 
 import TEXT from 'ultils/lang';
 import { selectLanguage } from 'actions/action';
-import { Flag, Segment } from 'semantic-ui-react';
+import { Flag, Container } from 'semantic-ui-react';
 
 
 class Footer extends React.Component {
     render() {
-        return <div id='footer'>
-            <div id='footer-content'></div>
+        return <Container id='footer'>
+            <Container id='footer-content'></Container>
             <p id='develop-by'>{TEXT.develop_by[this.props.language]}</p>
-            <div id='lang'>
+            <Container id='lang'>
                 <Flag name='us' onClick={this.onClickLanguage.bind(this, 'vi')} />
                 <Flag name='vn' onClick={this.onClickLanguage.bind(this, 'en')} />
-            </div>
-        </div>
+            </Container>
+        </Container>
     }
 
     onClickLanguage(lang) {

@@ -7,7 +7,7 @@ import Food from 'components/PetFood';
 import device from 'ultils/DeviceHelper';
 import TEXT from 'ultils/lang';
 
-import { Tab } from 'semantic-ui-react';
+import { Tab, Container, Button, Header, Image} from 'semantic-ui-react';
 
 
 const API = {
@@ -47,31 +47,33 @@ class FoodView extends React.Component {
     }
 
     render() {
-        return (<div className='food-container'>
-            <h2 className='title'>{TEXT.pet_food[this.props.language]} <img src="https://image.flaticon.com/icons/svg/372/372936.svg" height="72px" /></h2>
-
+        return (<Container className='food-container'>
+            <Header as='h2'>
+                <Image src='https://image.flaticon.com/icons/svg/372/372936.svg' />
+                {' '+TEXT.pet_food[this.props.language]}
+            </Header>
             {($.isEmptyObject(this.props.food_detail)) ? this.renderFoodPage() : this.renderDetail()}
-        </div>);
+        </Container>);
     }
 
     renderDetail() {
-        return <div>
-            <div className='detail-img-container'>
+        return <Container>
+            <Container className='detail-img-container'>
                 <img src={this.props.food_detail.image} className='detail-img'></img>
-            </div>
-            <div className='detail-infors'>
+            </Container>
+            <Container className='detail-infors'>
                 <p id='detail-name'>{TEXT.product_name[this.props.language] + ' :  '}{this.props.food_detail.name}</p>
                 <p id='detail-retail-price'>{TEXT.retail_price[this.props.language] + ' :  '}{this.props.food_detail.retail_price}</p>
                 <p id='detail-producer'>{TEXT.producer[this.props.language] + ' :  '}{this.props.food_detail.producer}</p>
                 <p id='detail-description'>{TEXT.description[this.props.language] + ' :  '}{this.props.food_detail.description}</p>
-                <button id='btn-call-us' className='btn btn-success'>
+                <Button color="green" id='btn-call-us' className='btn btn-success'>
                     {(!device.isMobile()) ? TEXT.call_us[this.props.language] : <a href='tel:+841693689453'>{TEXT.call_us[this.props.language]}</a>}
                     <p>(+84) 987 459 907</p>
-                </button>
-                <button id='btn-other-food' className='btn btn-info' onClick={this.onClickBtnOtherProduct.bind(this)}>{TEXT.other_food[this.props.language]}</button>
-            </div>
+                </Button>
+                <Button id='btn-other-food' color="blue" className='btn btn-info' onClick={this.onClickBtnOtherProduct.bind(this)}>{TEXT.other_food[this.props.language]}</Button>
+            </Container>
 
-        </div>
+        </Container>
     }
 
     renderFoodPage() {
@@ -92,9 +94,9 @@ class FoodView extends React.Component {
         this.state.visibleFoods = this.getFoodOnCurrentPage();
 
         return <Tab.Pane>
-            <div id='food-panel' >
-                {this.renderFoods(this.state.visibleFoods)}</div>
-            {this.renderNavButtons()}
+            <Container id='food-panel' >
+                {this.renderFoods(this.state.visibleFoods)}
+            </Container>
         </Tab.Pane>;
     }
 
@@ -128,38 +130,38 @@ class FoodView extends React.Component {
         return foods;
     }
 
-    renderNavButtons() {
-        var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
-            this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
+    // renderNavButtons() {
+    //     var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
+    //         this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
 
-        var element = <div id='nav-button'>
-            <button id='btn-prev' className='center btn btn-default' onClick={this.onClickBtnPrev.bind(this)}>{TEXT.prev[this.props.language]}</button>
-            <span id='page-number' >{TEXT.page[this.props.language]} {this.state.pageIndex + 1} / {Math.ceil(totalPage) + 1}</span>
-            <button id='btn-next' className='center btn btn-default' onClick={this.onClickBtnNext.bind(this)}>{TEXT.next[this.props.language]}</button>
-        </div>
+    //     var element = <div id='nav-button'>
+    //         <Button id='btn-prev' className='center btn btn-default' onClick={this.onClickBtnPrev.bind(this)}>{TEXT.prev[this.props.language]}</Button>
+    //         <span id='page-number' >{TEXT.page[this.props.language]} {this.state.pageIndex + 1} / {Math.ceil(totalPage) + 1}</span>
+    //         <Button id='btn-next' className='center btn btn-default' onClick={this.onClickBtnNext.bind(this)}>{TEXT.next[this.props.language]}</Button>
+    //     </div>
 
-        return element;
-    }
+    //     return element;
+    // }
 
-    onClickBtnNext() {
-        var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
-            this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
+    // onClickBtnNext() {
+    //     var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
+    //         this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
 
-        if (this.state.pageIndex < totalPage) {
-            this.state.pageIndex++;
-            this.state.visibleFoods = this.getFoodOnCurrentPage();
-            this.updateState();
-        }
-    }
+    //     if (this.state.pageIndex < totalPage) {
+    //         this.state.pageIndex++;
+    //         this.state.visibleFoods = this.getFoodOnCurrentPage();
+    //         this.updateState();
+    //     }
+    // }
 
-    onClickBtnPrev() {
-        if (this.state.pageIndex > 0) {
-            this.state.pageIndex--;
-            this.state.visibleFoods = this.getFoodOnCurrentPage();
-            this.updateState();
-        }
+    // onClickBtnPrev() {
+    //     if (this.state.pageIndex > 0) {
+    //         this.state.pageIndex--;
+    //         this.state.visibleFoods = this.getFoodOnCurrentPage();
+    //         this.updateState();
+    //     }
 
-    }
+    // }
 
     onClickBtnOtherProduct() {
         this.props.dispatch(viewFoodDetail({}));
