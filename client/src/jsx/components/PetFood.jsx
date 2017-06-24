@@ -3,6 +3,7 @@ import style from 'css/style.scss';
 import { connect } from 'react-redux';
 import { viewFoodDetail } from 'actions/action';
 import TEXT from 'ultils/lang';
+import { Image } from 'semantic-ui-react';
 
 
 class PetFood extends React.Component {
@@ -29,7 +30,7 @@ class PetFood extends React.Component {
     }
 
     renderImage() {
-        return <img src={this.props.info.image}></img>
+        return <Image src={this.props.info.image}/>
     }
 
     renderProducer() {

@@ -7,6 +7,8 @@ import Food from 'components/PetFood';
 import device from 'ultils/DeviceHelper';
 import TEXT from 'ultils/lang';
 
+import { Tab } from 'semantic-ui-react';
+
 
 const API = {
     url_food_list: 'https://petzone.herokuapp.com/foodlist'
@@ -40,12 +42,14 @@ class FoodView extends React.Component {
             this.state.visibleFoods = this.getFoodOnCurrentPage();
             this.updateState();
         }.bind(this));
+
+
     }
 
     render() {
-        return (<div>
-            <h2 className='title'>{TEXT.pet_food[this.props.language]} <img src="https://image.flaticon.com/icons/svg/372/372936.svg" height="72px"/></h2>
-            
+        return (<div className='food-container'>
+            <h2 className='title'>{TEXT.pet_food[this.props.language]} <img src="https://image.flaticon.com/icons/svg/372/372936.svg" height="72px" /></h2>
+
             {($.isEmptyObject(this.props.food_detail)) ? this.renderFoodPage() : this.renderDetail()}
         </div>);
     }
@@ -71,11 +75,27 @@ class FoodView extends React.Component {
     }
 
     renderFoodPage() {
+        this.tabs = [{ menuItem: TEXT.all[this.props.language], render: this.renderFoodPanel.bind(this, "All") },
+        { menuItem: TEXT.dog[this.props.language], render: this.renderFoodPanel.bind(this, "Dog") },
+        { menuItem: TEXT.cat[this.props.language], render: this.renderFoodPanel.bind(this, "Cat") },
+        { menuItem: TEXT.sick_dog[this.props.language], render: this.renderFoodPanel.bind(this, "SickDog") },
+        { menuItem: TEXT.sick_cat[this.props.language], render: this.renderFoodPanel.bind(this, "SickCat") }]
+
         return (<div id='food-view'>
-            {this.renderFilterButtons()}
-            <div id='food-panel' >{this.renderFoods(this.state.visibleFoods)}</div>
-            {this.renderNavButtons()}
+            <Tab panes={this.tabs} />
         </div>)
+    }
+
+    renderFoodPanel(name) {
+        this.state.foods = this.filterFoodsFromRaw(name);
+        this.state.pageIndex = 0;
+        this.state.visibleFoods = this.getFoodOnCurrentPage();
+
+        return <Tab.Pane>
+            <div id='food-panel' >
+                {this.renderFoods(this.state.visibleFoods)}</div>
+            {this.renderNavButtons()}
+        </Tab.Pane>;
     }
 
     renderFoods(foods) {
@@ -108,18 +128,6 @@ class FoodView extends React.Component {
         return foods;
     }
 
-    renderFilterButtons() {
-        var element = <div>
-            <button className="btn btn-info" onClick={this.onClickFilter.bind(this, 'All')}>{TEXT.all[this.props.language]}</button>
-            <button className="btn btn-default" onClick={this.onClickFilter.bind(this, 'Dog')}>{TEXT.dog[this.props.language]}</button>
-            <button className="btn btn-default" onClick={this.onClickFilter.bind(this, 'Cat')}>{TEXT.cat[this.props.language]}</button>
-            <button className="btn btn-default" onClick={this.onClickFilter.bind(this, 'SickDog')}>{TEXT.sick_dog[this.props.language]}</button>
-            <button className="btn btn-default" onClick={this.onClickFilter.bind(this, 'SickCat')}>{TEXT.sick_cat[this.props.language]}</button>
-        </div>
-
-        return element;
-    }
-
     renderNavButtons() {
         var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
             this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
@@ -131,13 +139,6 @@ class FoodView extends React.Component {
         </div>
 
         return element;
-    }
-
-    onClickFilter(pet_type) {
-        this.state.foods = this.filterFoodsFromRaw(pet_type);
-        this.state.pageIndex = 0;
-        this.state.visibleFoods = this.getFoodOnCurrentPage();
-        this.updateState();
     }
 
     onClickBtnNext() {

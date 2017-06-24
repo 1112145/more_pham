@@ -14,7 +14,10 @@ var store = createStore(reducer, redux_dev_extension);
 
 ReactDOM.render(<Provider store={store}><div>
     <NavBar />
-    <FoodView />
+    <div className='body-content'>
+        <FoodView />
+    </div>
+    
     <Footer />
     </div>
 </Provider>, document.getElementById('root'));

@@ -1,18 +1,19 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import TEXT from 'ultils/lang';
 import { selectLanguage } from 'actions/action';
+import { Flag, Segment } from 'semantic-ui-react';
 
 
 class Footer extends React.Component {
-    render(){
+    render() {
         return <div id='footer'>
             <div id='footer-content'></div>
             <p id='develop-by'>{TEXT.develop_by[this.props.language]}</p>
-             <div id='lang'>
-                <img src='/assets/images/vietnamese.png' height="24px" height='24px' onClick={this.onClickLanguage.bind(this, 'vi')} />
-                <img src='/assets/images/english.png' height="24px" height='24px' onClick={this.onClickLanguage.bind(this, 'en')}  />
+            <div id='lang'>
+                <Flag name='us' onClick={this.onClickLanguage.bind(this, 'vi')} />
+                <Flag name='vn' onClick={this.onClickLanguage.bind(this, 'en')} />
             </div>
         </div>
     }
