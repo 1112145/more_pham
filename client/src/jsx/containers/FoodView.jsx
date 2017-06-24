@@ -7,7 +7,7 @@ import Food from 'components/PetFood';
 import device from 'ultils/DeviceHelper';
 import TEXT from 'ultils/lang';
 
-import { Tab, Container, Button, Header, Image} from 'semantic-ui-react';
+import { Tab, Container, Button, Header, Image } from 'semantic-ui-react';
 
 
 const API = {
@@ -50,7 +50,7 @@ class FoodView extends React.Component {
         return (<Container className='food-container'>
             <Header as='h2'>
                 <Image src='https://image.flaticon.com/icons/svg/372/372936.svg' />
-                {' '+TEXT.pet_food[this.props.language]}
+                {' ' + TEXT.pet_food[this.props.language]}
             </Header>
             {($.isEmptyObject(this.props.food_detail)) ? this.renderFoodPage() : this.renderDetail()}
         </Container>);
@@ -83,19 +83,22 @@ class FoodView extends React.Component {
         { menuItem: TEXT.sick_dog[this.props.language], render: this.renderFoodPanel.bind(this, "SickDog") },
         { menuItem: TEXT.sick_cat[this.props.language], render: this.renderFoodPanel.bind(this, "SickCat") }]
 
+        var onTabChange = function () {
+            this.state.pageIndex = 0;
+        }
+
         return (<div id='food-view'>
-            <Tab panes={this.tabs} />
+            <Tab panes={this.tabs} onTabChange={onTabChange.bind(this)}/>
         </div>)
     }
 
     renderFoodPanel(name) {
         this.state.foods = this.filterFoodsFromRaw(name);
-        this.state.pageIndex = 0;
         this.state.visibleFoods = this.getFoodOnCurrentPage();
-
         return <Tab.Pane>
             <Container id='food-panel' >
                 {this.renderFoods(this.state.visibleFoods)}
+                {this.renderNavButtons()}
             </Container>
         </Tab.Pane>;
     }
@@ -130,38 +133,40 @@ class FoodView extends React.Component {
         return foods;
     }
 
-    // renderNavButtons() {
-    //     var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
-    //         this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
+    renderNavButtons() {
+        var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
+            this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
 
-    //     var element = <div id='nav-button'>
-    //         <Button id='btn-prev' className='center btn btn-default' onClick={this.onClickBtnPrev.bind(this)}>{TEXT.prev[this.props.language]}</Button>
-    //         <span id='page-number' >{TEXT.page[this.props.language]} {this.state.pageIndex + 1} / {Math.ceil(totalPage) + 1}</span>
-    //         <Button id='btn-next' className='center btn btn-default' onClick={this.onClickBtnNext.bind(this)}>{TEXT.next[this.props.language]}</Button>
-    //     </div>
+        var element = <div id='nav-button'>
+            <Button id='btn-prev' className='center btn btn-default' onClick={this.onClickBtnPrev.bind(this)}>{TEXT.prev[this.props.language]}</Button>
+            <span id='page-number' >{TEXT.page[this.props.language]} {this.state.pageIndex + 1} / {Math.ceil(totalPage) + 1}</span>
+            <Button id='btn-next' className='center btn btn-default' onClick={this.onClickBtnNext.bind(this)}>{TEXT.next[this.props.language]}</Button>
+        </div>
 
-    //     return element;
-    // }
+        return element;
+    }
 
-    // onClickBtnNext() {
-    //     var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
-    //         this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
+    onClickBtnNext() {
+        var totalPage = (this.state.foods.length % this.state.pageSize == 0) ?
+            this.state.foods.length / this.state.pageSize : (this.state.foods.length / this.state.pageSize) - 1;
 
-    //     if (this.state.pageIndex < totalPage) {
-    //         this.state.pageIndex++;
-    //         this.state.visibleFoods = this.getFoodOnCurrentPage();
-    //         this.updateState();
-    //     }
-    // }
 
-    // onClickBtnPrev() {
-    //     if (this.state.pageIndex > 0) {
-    //         this.state.pageIndex--;
-    //         this.state.visibleFoods = this.getFoodOnCurrentPage();
-    //         this.updateState();
-    //     }
+        if (this.state.pageIndex < totalPage) {
 
-    // }
+            this.state.pageIndex++;
+            this.state.visibleFoods = this.getFoodOnCurrentPage();
+            this.updateState();
+        }
+    }
+
+    onClickBtnPrev() {
+        if (this.state.pageIndex > 0) {
+            this.state.pageIndex--;
+            this.state.visibleFoods = this.getFoodOnCurrentPage();
+            this.updateState();
+        }
+
+    }
 
     onClickBtnOtherProduct() {
         this.props.dispatch(viewFoodDetail({}));
